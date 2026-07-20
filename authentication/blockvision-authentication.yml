@@ -1,0 +1,23 @@
+generated: '2026-07-18'
+method: searched
+source: https://docs.blockvision.org/reference/ ; confirmed via live probe of api.blockvision.org
+summary:
+  types: [apiKey]
+  api_key_in: [header]
+  oauth2_flows: []
+schemes:
+  - name: ApiKeyAuth
+    type: apiKey
+    in: header
+    parameter_name: x-api-key
+    description: >-
+      All BlockVision Indexing / Data API requests require an API key issued from the
+      BlockVision dashboard (https://dashboard.blockvision.org/app), passed in the
+      x-api-key request header. A request without a key returns HTTP 403 with the JSON
+      envelope {"code":-32002,"message":"apikey must"} (confirmed live 2026-07-18).
+    evidence:
+      - source: live probe https://api.blockvision.org/v2/sui/account/coins
+        observed: 'HTTP 403 {"code":-32002,"message":"apikey must"}'
+notes: >-
+  Key issuance and quota are managed per-project in the dashboard; usage is metered in
+  Compute Units (see conventions/ and lifecycle/). No OAuth2/OIDC surface is documented.
