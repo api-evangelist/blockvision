@@ -1,0 +1,64 @@
+generated: '2026-07-18'
+method: derived
+source: llms/blockvision-llms.txt (endpoint inventory)
+description: >-
+  Entity graph derived from the BlockVision Data / Indexing API endpoint surface across
+  the Sui and Monad networks. Relationships are inferred from endpoint semantics
+  (accounts hold coins/tokens/NFTs; collections group NFTs; coins/tokens trade in DEX
+  pools). Field-level id references were not machine-retrievable this pass (docs
+  host bot-protected); enrich with the object reference on a future round.
+networks: [sui, monad]
+entities:
+  - name: Account
+    description: A blockchain address; the primary query subject.
+    endpoints:
+      - /v2/sui/account/coins
+      - /v2/sui/account/nfts
+      - /v2/sui/account/activity
+      - /v2/sui/account/defiPortfolio
+      - /v2/monad/account/tokens
+      - /v2/monad/account/nfts
+      - /v2/monad/account/activity
+      - /v2/monad/account/transactions
+    relationships:
+      - { type: has_many, target: Coin, via: address }
+      - { type: has_many, target: Token, via: address }
+      - { type: has_many, target: NFT, via: address }
+      - { type: has_many, target: Transaction, via: address }
+      - { type: has_one, target: DeFiPortfolio, via: address }
+  - name: Coin
+    description: A Sui coin type with price, supply, holders and market data.
+    relationships:
+      - { type: has_many, target: Holder, via: coinType }
+      - { type: has_many, target: DexPool, via: coinType }
+      - { type: has_many, target: Trade, via: coinType }
+  - name: Token
+    description: A Monad/EVM ERC-20 token with price, holders and market data.
+    relationships:
+      - { type: has_many, target: Holder, via: contractAddress }
+      - { type: has_many, target: DexPool, via: contractAddress }
+      - { type: has_many, target: Trade, via: contractAddress }
+  - name: NFT
+    description: A non-fungible token owned by an account and belonging to a collection.
+    relationships:
+      - { type: belongs_to, target: Collection, via: collectionType }
+  - name: Collection
+    description: An NFT collection with holders and a member NFT list.
+    relationships:
+      - { type: has_many, target: NFT, via: collectionType }
+      - { type: has_many, target: Holder, via: collectionType }
+  - name: DexPool
+    description: A decentralized-exchange liquidity pool for a coin/token pair.
+    relationships:
+      - { type: has_many, target: Trade, via: poolId }
+  - name: Trade
+    description: A DEX swap transaction record.
+  - name: Contract
+    description: A smart contract with verification status, bytecode and source code.
+    endpoints:
+      - /v2/monad/contract/detail
+      - /v2/monad/contract/sourceCode
+  - name: DeFiPortfolio
+    description: An account's aggregated positions across top DeFi protocols.
+  - name: Holder
+    description: An address holding a share of a coin/token/collection supply.

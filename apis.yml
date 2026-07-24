@@ -1,20 +1,67 @@
 aid: blockvision
-name: blockvision
-description: blockvision is a company surfaced as a portfolio company of qiming and added to the API Evangelist
-  network as a stub for enrichment. This profile is a lead awaiting the enrichment pipeline.
+accessModel:
+  pricing: unknown
+  onboarding: self-serve
+  trial: false
+  try_now: false
+  public: false
+  label: Self-serve signup
+  confidence: medium
+  source:
+  - authentication
+  generated: '2026-07-22'
+  method: derived
+image: https://kinlane-images.s3.amazonaws.com/shared/apis-json/icons/blockvision.png
+name: BlockVision
+description: >-
+  BlockVision is a Web3 data infrastructure provider offering multi-chain node, indexing,
+  and on-chain data-retrieval APIs for developers building decentralized applications.
+  Its stack includes an Indexing API service (real-time account, coin/token, NFT, DeFi,
+  DEX-market and smart-contract data across Sui, Monad, Ethereum, Arbitrum, BNB Chain,
+  Optimism and Polygon), an RPC Node service (AceNode) with geo-distributed low-latency
+  and archive access, a gRPC endpoint for Sui, and Explorer-as-a-Service (branded block
+  explorers such as SuiVision and BBScan). Requests to the Data API (api.blockvision.org,
+  versioned under /v2) are authenticated with an x-api-key header and metered in Compute
+  Units. Originally added to the API Evangelist network as a portfolio company of Qiming,
+  this profile has been enriched from BlockVision's public developer surface.
 url: https://raw.githubusercontent.com/api-evangelist/blockvision/refs/heads/main/apis.yml
 x-type: company
 x-source: vc-portfolio
 x-backed-by:
 - qiming
-x-tier: stub
-x-tier-reason: portfolio-lead
+x-tier: profiled
+x-tier-reason: enriched-from-public-developer-surface
 specificationVersion: '0.20'
 created: '2026-07-17'
-modified: '2026-07-17'
+modified: '2026-07-18'
 tags:
 - Company
-apis: []
+- Blockchain
+- Web3
+- Data Infrastructure
+- Sui
+- Monad
+- NFT
+- DeFi
+- RPC Node
+- Indexing
+- Cryptocurrency
+- Smart Contracts
+apis:
+- name: BlockVision Data API
+  description: >-
+    Multi-chain indexing and on-chain data-retrieval REST API (accounts, coins/tokens,
+    NFTs, collections, DeFi portfolios, DEX market data, and smart-contract verification)
+    for Sui and Monad, authenticated with an x-api-key header and metered in Compute Units.
+  humanURL: https://docs.blockvision.org/reference/welcome-to-blockvision
+  baseURL: https://api.blockvision.org
+  properties:
+  - type: Documentation
+    url: https://docs.blockvision.org
+  - type: APIReference
+    url: https://docs.blockvision.org/reference
+  - type: Authentication
+    url: authentication/blockvision-authentication.yml
 maintainers:
 - FN: Kin Lane
   email: kin@apievangelist.com
@@ -23,3 +70,48 @@ maintainers:
 common:
 - type: Website
   url: https://blockvision.org
+- type: DeveloperPortal
+  url: https://dashboard.blockvision.org/app
+- type: Documentation
+  url: https://docs.blockvision.org
+- type: APIReference
+  url: https://docs.blockvision.org/reference
+- type: GettingStarted
+  url: https://docs.blockvision.org/reference/welcome-to-blockvision
+- type: GitHubOrganization
+  url: https://github.com/blockvisionhq
+- type: Support
+  url: https://discord.gg/J6Vm2W8JRj
+- type: Blog
+  url: https://medium.com/@BlockVision
+- type: Pricing
+  url: https://blockvision.org/pricing
+- type: SignUp
+  url: https://dashboard.blockvision.org/app
+- type: LLMsTxt
+  url: llms/blockvision-llms.txt
+- type: Packages
+  url: packages/blockvision-packages.yml
+- type: SDKs
+  url: packages/blockvision-packages.yml
+- type: MCPServer
+  url: mcp/blockvision-mcp.yml
+- type: Authentication
+  url: authentication/blockvision-authentication.yml
+- type: ErrorCatalog
+  url: errors/blockvision-error-codes.yml
+- type: Lifecycle
+  url: lifecycle/blockvision-lifecycle.yml
+- type: Conventions
+  url: conventions/blockvision-conventions.yml
+- type: Conformance
+  url: conformance/blockvision-conformance.yml
+- type: DataModel
+  url: data-model/blockvision-data-model.yml
+- type: DomainSecurity
+  url: security/blockvision-domain-security.yml
+x-enrichment:
+  date: '2026-07-19'
+  status: backfilled
+  pass: local-v1
+  note: backfilled from .gitignore signal + verified work evidence

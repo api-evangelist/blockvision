@@ -1,0 +1,25 @@
+generated: '2026-07-18'
+method: searched
+source: live probe of api.blockvision.org ; https://docs.blockvision.org/reference/
+format: custom-json-envelope
+envelope:
+  description: >-
+    BlockVision Data API responses wrap results in a JSON-RPC-style envelope with a
+    numeric `code` and a human `message`. Success uses code 0 with a `result`/`data`
+    payload; failures use negative codes. This is NOT RFC 9457 problem+json.
+  fields:
+    code: integer status/error code (0 = success, negative = error)
+    message: human-readable status text
+    result: payload object on success (field name varies by endpoint; also seen as `data`)
+errors:
+  - code: -32002
+    message: apikey must
+    meaning: Request is missing the required x-api-key header (or the key is invalid).
+    http_status: 403
+    remediation: Supply a valid API key from the BlockVision dashboard in the x-api-key header.
+    evidence: live probe https://api.blockvision.org/v2/sui/account/coins (2026-07-18)
+notes: >-
+  Only the missing-apikey error was confirmable without an authenticated key. Additional
+  codes (rate-limit / compute-unit exhaustion, invalid params, not found) are documented
+  in the reference but were not machine-retrievable during this pass (docs host is
+  bot-protected). Enrich on a future round with an authenticated key.

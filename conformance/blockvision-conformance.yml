@@ -1,0 +1,32 @@
+generated: '2026-07-18'
+method: derived
+source: https://docs.blockvision.org/reference/ ; llms/blockvision-llms.txt ; live probe
+standards:
+  - id: apikey-auth
+    conforms: true
+    evidence: x-api-key header required (HTTP 403 "apikey must" without it)
+  - id: oauth2
+    conforms: false
+  - id: oidc
+    conforms: false
+  - id: rfc9457-problem-details
+    conforms: false
+    evidence: errors use a JSON-RPC-style {code,message} envelope, not application/problem+json
+  - id: pagination
+    conforms: true
+    evidence: list endpoints documented as returning paginated results
+  - id: idempotency
+    conforms: false
+    evidence: read-only data API, no Idempotency-Key contract
+  - id: json-rpc
+    conforms: partial
+    evidence: >-
+      RPC Node for Sui is standard JSON-RPC; the Data/Indexing REST API borrows the
+      JSON-RPC numeric error-code convention but is otherwise REST over HTTPS
+  - id: grpc
+    conforms: true
+    evidence: gRPC endpoint for Sui documented (reference/grpc-for-sui)
+notes: >-
+  Derived conformance posture. No published compliance certifications (SOC 2 / ISO 27001 /
+  PCI / HIPAA) were found (trust/security probes returned none), so NO Compliance pointer
+  is emitted.

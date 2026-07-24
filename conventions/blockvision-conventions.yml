@@ -1,0 +1,38 @@
+generated: '2026-07-18'
+method: derived
+source: https://docs.blockvision.org/reference/ ; llms/blockvision-llms.txt ; live probe
+authentication:
+  style: api-key-header
+  header: x-api-key
+  ref: authentication/blockvision-authentication.yml
+base_url: https://api.blockvision.org
+versioning:
+  style: uri-path
+  current: v2
+  ref: lifecycle/blockvision-lifecycle.yml
+idempotency:
+  supported: false
+  reason: >-
+    The Data / Indexing API surface is read-only (on-chain data retrieval); there is no
+    documented Idempotency-Key contract. No Idempotency pointer emitted.
+pagination:
+  style: cursor-or-page
+  evidence: >-
+    Multiple list endpoints return paginated results (e.g. "Retrieve a paginated list of
+    coin swap transactions", collection NFT lists, holder lists). Exact parameter names
+    were not machine-retrievable this pass (docs host bot-protected).
+rate_limiting:
+  model: Compute Units (CU)
+  docs: https://docs.blockvision.org/reference/rate-limits-and-compute-units
+  ref: lifecycle/blockvision-lifecycle.yml
+  note: Each endpoint consumes a number of Compute Units against the project quota.
+error_envelope:
+  format: json-rpc-style
+  shape: '{ code: <int>, message: <string>, result|data: <payload> }'
+  ref: errors/blockvision-error-codes.yml
+metadata:
+  request_id_header: unknown
+notes: >-
+  Cross-cutting semantics for the BlockVision Data API. Idempotency intentionally omitted
+  (read-only API). Pagination and request-id specifics to be enriched with an
+  authenticated key on a future round.

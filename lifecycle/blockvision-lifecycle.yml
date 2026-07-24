@@ -1,0 +1,23 @@
+generated: '2026-07-18'
+method: derived
+source: base path of api.blockvision.org ; https://docs.blockvision.org/reference/
+versioning:
+  scheme: uri-path
+  current: v2
+  docs: https://docs.blockvision.org/reference/welcome-to-blockvision
+  evidence: production endpoints served under /v2/ (e.g. /v2/sui/account/coins, /v2/monad/account/tokens)
+deprecation:
+  policy_url: null
+  sunset_header: unknown
+sla:
+  url: null
+  uptime_target: null
+status_page: null
+metering:
+  model: Compute Units
+  docs: https://docs.blockvision.org/reference/rate-limits-and-compute-units
+notes: >-
+  BlockVision versions its Data API in the URI path (v2). No public status page
+  (status.blockvision.org returns 404), SLA, or formal deprecation policy was found
+  during this pass; usage is governed by a Compute Units quota model rather than a
+  fixed RPS limit. No StatusPage or Deprecation pointer emitted (neither published).

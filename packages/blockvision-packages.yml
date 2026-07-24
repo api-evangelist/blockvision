@@ -1,0 +1,22 @@
+generated: '2026-07-18'
+method: searched
+source: https://github.com/blockvisionhq
+packages:
+  - language: go
+    registry: pkg.go.dev
+    name: github.com/block-vision/sui-go-sdk
+    url: https://github.com/blockvisionhq/sui-go-sdk
+    install: go get github.com/block-vision/sui-go-sdk
+    official: true
+    description: Go language SDK for the Sui blockchain, maintained by BlockVision (blockvisionhq). Apache-2.0.
+  - language: typescript
+    registry: github
+    name: bbscan-ts-sdk
+    url: https://github.com/blockvisionhq/bbscan-ts-sdk
+    install: git clone https://github.com/blockvisionhq/bbscan-ts-sdk
+    official: true
+    description: BBScan TypeScript SDK for BounceBit Stake, maintained by BlockVision (blockvisionhq).
+notes: >-
+  Two first-party client libraries published under the blockvisionhq GitHub org.
+  The Indexing/Data APIs (api.blockvision.org) are consumed over HTTPS with an x-api-key
+  header; no dedicated REST client package was found on npm/PyPI at the time of this pass.
