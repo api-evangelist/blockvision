@@ -6,51 +6,55 @@ server:
   name: blockvision
   transport: http
   url: null
-  note: >-
-    No official hosted/remote BlockVision MCP server was found during this pass. The
-    tools below are a DERIVED candidate surface mapped one-to-one from documented Data API
-    endpoints (Sui + Monad indexing). They are a starting point for a future MCP wrapper,
-    not a published server.
+  note: No official hosted/remote BlockVision MCP server was found during this pass. The tools below are
+    a DERIVED candidate surface mapped one-to-one from documented Data API endpoints (Sui + Monad indexing).
+    They are a starting point for a future MCP wrapper, not a published server.
 auth:
   type: apiKey
   header: x-api-key
 tools:
-  - name: get_sui_account_coins
-    description: Get all coins owned by a Sui address with price and metadata.
-    source_endpoint: /v2/sui/account/coins
-  - name: get_sui_account_nfts
-    description: Get all NFTs owned by a Sui address.
-    source_endpoint: /v2/sui/account/nfts
-  - name: get_sui_account_activity
-    description: Get the historical activity of a Sui account.
-    source_endpoint: /v2/sui/account/activity
-  - name: get_sui_account_defi_portfolio
-    description: Get a Sui account's DeFi portfolio across top protocols.
-    source_endpoint: /v2/sui/account/defiPortfolio
-  - name: get_sui_coin_detail
-    description: Get metadata, price, supply, holders and verification for a Sui coin type.
-    source_endpoint: /v2/sui/coin/detail
-  - name: get_sui_coin_market_data
-    description: Get real-time market data for a Sui coin.
-    source_endpoint: /v2/sui/coin/marketData
-  - name: get_sui_coin_ohlcv
-    description: Get OHLCV candlestick data for a Sui coin.
-    source_endpoint: /v2/sui/coin/ohlcv
-  - name: get_sui_collection_detail
-    description: Get details of a Sui NFT collection.
-    source_endpoint: /v2/sui/collection/detail
-  - name: get_monad_account_tokens
-    description: Get all tokens held by a Monad address (native + ERC-20).
-    source_endpoint: /v2/monad/account/tokens
-  - name: get_monad_account_nfts
-    description: Get all NFTs held by a Monad address.
-    source_endpoint: /v2/monad/account/nfts
-  - name: get_monad_account_transactions
-    description: Get all transactions of a Monad address.
-    source_endpoint: /v2/monad/account/transactions
-  - name: get_monad_contract_source_code
-    description: Get a Monad contract's verification status and source code.
-    source_endpoint: /v2/monad/contract/sourceCode
-  - name: get_monad_token_gating
-    description: Check whether an address holds a specific ERC-20/721/1155 token on Monad.
-    source_endpoint: /v2/monad/token/gating
+- name: get_sui_account_coins
+  description: Get all coins owned by a Sui address with price and metadata.
+  source_endpoint: /v2/sui/account/coins
+- name: get_sui_account_nfts
+  description: Get all NFTs owned by a Sui address.
+  source_endpoint: /v2/sui/account/nfts
+- name: get_sui_account_activity
+  description: Get the historical activity of a Sui account.
+  source_endpoint: /v2/sui/account/activity
+- name: get_sui_account_defi_portfolio
+  description: Get a Sui account's DeFi portfolio across top protocols.
+  source_endpoint: /v2/sui/account/defiPortfolio
+- name: get_sui_coin_detail
+  description: Get metadata, price, supply, holders and verification for a Sui coin type.
+  source_endpoint: /v2/sui/coin/detail
+- name: get_sui_coin_market_data
+  description: Get real-time market data for a Sui coin.
+  source_endpoint: /v2/sui/coin/marketData
+- name: get_sui_coin_ohlcv
+  description: Get OHLCV candlestick data for a Sui coin.
+  source_endpoint: /v2/sui/coin/ohlcv
+- name: get_sui_collection_detail
+  description: Get details of a Sui NFT collection.
+  source_endpoint: /v2/sui/collection/detail
+- name: get_monad_account_tokens
+  description: Get all tokens held by a Monad address (native + ERC-20).
+  source_endpoint: /v2/monad/account/tokens
+- name: get_monad_account_nfts
+  description: Get all NFTs held by a Monad address.
+  source_endpoint: /v2/monad/account/nfts
+- name: get_monad_account_transactions
+  description: Get all transactions of a Monad address.
+  source_endpoint: /v2/monad/account/transactions
+- name: get_monad_contract_source_code
+  description: Get a Monad contract's verification status and source code.
+  source_endpoint: /v2/monad/contract/sourceCode
+- name: get_monad_token_gating
+  description: Check whether an address holds a specific ERC-20/721/1155 token on Monad.
+  source_endpoint: /v2/monad/token/gating
+deployment:
+  mode: none
+  verified: derived
+  tools: 13
+  checked: '2026-08-12'
+  source: catalog MCP census
