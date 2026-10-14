@@ -1,4 +1,5 @@
 aid: blockvision
+
 deliveryModel:
   model: saas
   open_source: false
@@ -10,6 +11,7 @@ deliveryModel:
   - pricing
   generated: '2026-08-28'
   method: derived
+
 accessModel:
   pricing: unknown
   onboarding: unknown
@@ -23,32 +25,43 @@ accessModel:
   - security
   generated: '2026-09-03'
   method: derived
+
 image: https://kinlane-images.s3.amazonaws.com/shared/apis-json/icons/blockvision.png
+
 name: BlockVision
-description: >-
-  BlockVision is a Web3 data infrastructure provider offering multi-chain node, indexing,
-  and on-chain data-retrieval APIs for developers building decentralized applications.
-  Its stack includes an Indexing API service (real-time account, coin/token, NFT, DeFi,
-  DEX-market and smart-contract data across Sui, Monad, Ethereum, Arbitrum, BNB Chain,
-  Optimism and Polygon), an RPC Node service (AceNode) with geo-distributed low-latency
-  and archive access, a gRPC endpoint for Sui, and Explorer-as-a-Service (branded block
-  explorers such as SuiVision and BBScan). Requests to the Data API (api.blockvision.org,
-  versioned under /v2) are authenticated with an x-api-key header and metered in Compute
-  Units. Originally added to the API Evangelist network as a portfolio company of Qiming,
-  this profile has been enriched from BlockVision's public developer surface.
+
+description: BlockVision is a Web3 data infrastructure provider offering multi-chain node, indexing, and on-chain data-retrieval APIs for developers
+  building decentralized applications. Its stack includes an Indexing API service (real-time account, coin/token, NFT, DeFi, DEX-market and smart-contract
+  data across Sui, Monad, Ethereum, Arbitrum, BNB Chain, Optimism and Polygon), an RPC Node service (AceNode) with geo-distributed low-latency
+  and archive access, a gRPC endpoint for Sui, and Explorer-as-a-Service (branded block explorers such as SuiVision and BBScan). Requests to the
+  Data API (api.blockvision.org, versioned under /v2) are authenticated with an x-api-key header and metered in Compute Units. Originally added
+  to the API Evangelist network as a portfolio company of Qiming, this profile has been enriched from BlockVision's public developer surface.
+
 url: https://raw.githubusercontent.com/api-evangelist/blockvision/refs/heads/main/apis.yml
+
 x-type: company
+
 x-source: vc-portfolio
+
 x-backed-by:
 - qiming
+
 x-tier: profiled
+
 x-tier-reason: enriched-from-public-developer-surface
+
 specificationVersion: '0.23'
+
 created: '2026-07-17'
+
 modified: '2026-07-18'
+
 x-docs-platform: readme
+
 x-docs-platform-confidence: medium
+
 x-docs-platform-checked: 2026-09-20
+
 tags:
 - Company
 - Blockchain
@@ -62,27 +75,30 @@ tags:
 - Indexing
 - Cryptocurrency
 - Smart Contracts
-apis:
-- name: BlockVision Data API
-  description: >-
-    Multi-chain indexing and on-chain data-retrieval REST API (accounts, coins/tokens,
-    NFTs, collections, DeFi portfolios, DEX market data, and smart-contract verification)
-    for Sui and Monad, authenticated with an x-api-key header and metered in Compute Units.
-  humanURL: https://docs.blockvision.org/reference/welcome-to-blockvision
-  baseURL: https://api.blockvision.org
-  properties:
-  - type: Documentation
-    url: https://docs.blockvision.org
-  - type: APIReference
-    url: https://docs.blockvision.org/reference
-  - type: Authentication
-    url: authentication/blockvision-authentication.yml
+
 maintainers:
 - FN: Kin Lane
   email: kin@apievangelist.com
 - FN: APIs.json
   email: info@apis.io
+
 common:
+- type: AgenticAccess
+  url: agentic-access/blockvision-agentic-access.yml
+- type: Spectral
+  url: rules/blockvision-rules.yml
+- type: Deprecation
+  url: lifecycle/blockvision-lifecycle.yml
+- type: ErrorCatalog
+  url: errors/blockvision-problem-types.yml
+- type: Hosts
+  url: hosts/blockvision-hosts.yml
+- type: Vendors
+  url: vendors/blockvision-vendors.yml
+- type: TermsOfService
+  url: https://blockvision.org/terms
+- type: PrivacyPolicy
+  url: https://blockvision.org/privacy
 - type: Website
   url: https://blockvision.org
 - type: DeveloperPortal
@@ -111,7 +127,9 @@ common:
   url: packages/blockvision-packages.yml
 - type: X-MCPServerCandidate
   url: mcp/blockvision-mcp.yml
-  note: 'Renamed from MCPServer 2026-09-03 (roadmap#247): the manifest self-describes as status: candidate — a tool list derived from the published API contracts, not an existing server. The scorer already read the manifest and reported mcp_server correctly; the MCPServer type was crediting the artifact-type surfaces with a server that does not exist.'
+  note: 'Renamed from MCPServer 2026-09-03 (roadmap#247): the manifest self-describes as status: candidate — a tool list derived from the published
+    API contracts, not an existing server. The scorer already read the manifest and reported mcp_server correctly; the MCPServer type was crediting
+    the artifact-type surfaces with a server that does not exist.'
 - type: Authentication
   url: authentication/blockvision-authentication.yml
 - type: ErrorCatalog
@@ -126,8 +144,32 @@ common:
   url: data-model/blockvision-data-model.yml
 - type: DomainSecurity
   url: security/blockvision-domain-security.yml
+
+apis:
+- name: BlockVision Data API
+  description: Multi-chain indexing and on-chain data-retrieval REST API (accounts, coins/tokens, NFTs, collections, DeFi portfolios, DEX market
+    data, and smart-contract verification) for Sui and Monad, authenticated with an x-api-key header and metered in Compute Units.
+  humanURL: https://docs.blockvision.org/reference/welcome-to-blockvision
+  baseURL: https://api.blockvision.org
+  properties:
+  - url: openapi/blockvision-v2-openapi.yml
+    type: OpenAPI
+  - type: Documentation
+    url: https://docs.blockvision.org
+  - type: APIReference
+    url: https://docs.blockvision.org/reference
+  - type: Authentication
+    url: authentication/blockvision-authentication.yml
+  aid: blockvision:blockvision-data-api
+
 x-enrichment:
   date: '2026-07-19'
   status: backfilled
   pass: local-v1
   note: backfilled from .gitignore signal + verified work evidence
+
+x-readme-harvest:
+  date: '2026-10-14'
+  ops: 36
+  tool: harvest-readme-openapi.py
+  portal: https://docs.blockvision.org

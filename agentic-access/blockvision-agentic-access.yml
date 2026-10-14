@@ -1,0 +1,374 @@
+generated: '2026-10-14'
+method: generated
+source: openapi/blockvision-v2-openapi.yml
+description: Recommended x-agentic-access execution contracts, classified heuristically from
+  the OpenAPI. A governance starting point for exposing this API to AI agents — review and bind
+  audience per deployment. See research/curity/agentic-governance/.
+summary:
+  operations: 36
+  by_action_class:
+    connected: 36
+  by_consequence:
+    read: 36
+  human_in_the_loop_required: 0
+operations:
+- path: /monad/account/activities
+  method: get
+  operationId: retrieve-monad-account-activity
+  x-agentic-access:
+    action-class: connected
+    consequence: read
+    subject: optional
+    token:
+      max-ttl: 3600
+    audit: none
+- path: /monad/account/defiPortfolio
+  method: get
+  operationId: get_monadaccountdefiPortfolio
+  x-agentic-access:
+    action-class: connected
+    consequence: read
+    subject: optional
+    token:
+      max-ttl: 3600
+    audit: none
+- path: /monad/account/internal/transactions
+  method: get
+  operationId: retrieve-account-internal-transactions
+  x-agentic-access:
+    action-class: connected
+    consequence: read
+    subject: optional
+    token:
+      max-ttl: 3600
+    audit: none
+- path: /monad/account/nfts
+  method: get
+  operationId: retrieve-monad-account-nfts
+  x-agentic-access:
+    action-class: connected
+    consequence: read
+    subject: optional
+    token:
+      max-ttl: 3600
+    audit: none
+- path: /monad/account/tokens
+  method: get
+  operationId: retrieve-monad-account-tokens
+  x-agentic-access:
+    action-class: connected
+    consequence: read
+    subject: optional
+    token:
+      max-ttl: 3600
+    audit: none
+- path: /monad/account/transactions
+  method: get
+  operationId: retrieve-monad-account-transactions
+  x-agentic-access:
+    action-class: connected
+    consequence: read
+    subject: optional
+    token:
+      max-ttl: 3600
+    audit: none
+- path: /monad/collection/activities
+  method: get
+  operationId: retrieve-nft-activities
+  x-agentic-access:
+    action-class: connected
+    consequence: read
+    subject: optional
+    token:
+      max-ttl: 3600
+    audit: none
+- path: /monad/collection/holders
+  method: get
+  operationId: retrieve-nft-holders
+  x-agentic-access:
+    action-class: connected
+    consequence: read
+    subject: optional
+    token:
+      max-ttl: 3600
+    audit: none
+- path: /monad/contract/detail
+  method: get
+  operationId: get_monadcontractdetail
+  x-agentic-access:
+    action-class: connected
+    consequence: read
+    subject: optional
+    token:
+      max-ttl: 3600
+    audit: none
+- path: /monad/contract/source/code
+  method: get
+  operationId: retrieve-contract-source-code
+  x-agentic-access:
+    action-class: connected
+    consequence: read
+    subject: optional
+    token:
+      max-ttl: 3600
+    audit: none
+- path: /monad/native/holders
+  method: get
+  operationId: retrieve-monad-holders
+  x-agentic-access:
+    action-class: connected
+    consequence: read
+    subject: optional
+    token:
+      max-ttl: 3600
+    audit: none
+- path: /monad/token/activities
+  method: get
+  operationId: retrieve-token-activities
+  x-agentic-access:
+    action-class: connected
+    consequence: read
+    subject: optional
+    token:
+      max-ttl: 3600
+    audit: none
+- path: /monad/token/detail
+  method: get
+  operationId: retrieve-token-detail
+  x-agentic-access:
+    action-class: connected
+    consequence: read
+    subject: optional
+    token:
+      max-ttl: 3600
+    audit: none
+- path: /monad/token/gating
+  method: get
+  operationId: retrieve-token-gating-api
+  x-agentic-access:
+    action-class: connected
+    consequence: read
+    subject: optional
+    token:
+      max-ttl: 3600
+    audit: none
+- path: /monad/token/holders
+  method: get
+  operationId: retrieve-token-holders
+  x-agentic-access:
+    action-class: connected
+    consequence: read
+    subject: optional
+    token:
+      max-ttl: 3600
+    audit: none
+- path: /monad/token/market/data
+  method: get
+  operationId: get_monadtokenmarketdata
+  x-agentic-access:
+    action-class: connected
+    consequence: read
+    subject: optional
+    token:
+      max-ttl: 3600
+    audit: none
+- path: /monad/token/ohlcv
+  method: get
+  operationId: get_monadtokenohlcv
+  x-agentic-access:
+    action-class: connected
+    consequence: read
+    subject: optional
+    token:
+      max-ttl: 3600
+    audit: none
+- path: /monad/token/pools
+  method: get
+  operationId: get_monadtokenpools
+  x-agentic-access:
+    action-class: connected
+    consequence: read
+    subject: optional
+    token:
+      max-ttl: 3600
+    audit: none
+- path: /monad/token/price/list
+  method: get
+  operationId: get_monadtokenpricelist
+  x-agentic-access:
+    action-class: connected
+    consequence: read
+    subject: optional
+    token:
+      max-ttl: 3600
+    audit: none
+- path: /monad/token/trades
+  method: get
+  operationId: get_monadtokentrades
+  x-agentic-access:
+    action-class: connected
+    consequence: read
+    subject: optional
+    token:
+      max-ttl: 3600
+    audit: none
+- path: /monad/verified/contracts
+  method: get
+  operationId: get_monadverifiedcontracts
+  x-agentic-access:
+    action-class: connected
+    consequence: read
+    subject: optional
+    token:
+      max-ttl: 3600
+    audit: none
+- path: /sui/account/activities
+  method: get
+  operationId: retrieve-account-activity
+  x-agentic-access:
+    action-class: connected
+    consequence: read
+    subject: optional
+    token:
+      max-ttl: 3600
+    audit: none
+- path: /sui/account/coins
+  method: get
+  operationId: retrieve-account-coins
+  x-agentic-access:
+    action-class: connected
+    consequence: read
+    subject: optional
+    token:
+      max-ttl: 3600
+    audit: none
+- path: /sui/account/defiPortfolio
+  method: get
+  operationId: retrieve-account-defi-portfolio
+  x-agentic-access:
+    action-class: connected
+    consequence: read
+    subject: optional
+    token:
+      max-ttl: 3600
+    audit: none
+- path: /sui/account/nfts
+  method: get
+  operationId: retrieve-account-nfts
+  x-agentic-access:
+    action-class: connected
+    consequence: read
+    subject: optional
+    token:
+      max-ttl: 3600
+    audit: none
+- path: /sui/coin/detail
+  method: get
+  operationId: retrieve-coin-detail
+  x-agentic-access:
+    action-class: connected
+    consequence: read
+    subject: optional
+    token:
+      max-ttl: 3600
+    audit: none
+- path: /sui/coin/dex/pools
+  method: get
+  operationId: get_coindexpools
+  x-agentic-access:
+    action-class: connected
+    consequence: read
+    subject: optional
+    token:
+      max-ttl: 3600
+    audit: none
+- path: /sui/coin/holders
+  method: get
+  operationId: retrieve-coin-holders
+  x-agentic-access:
+    action-class: connected
+    consequence: read
+    subject: optional
+    token:
+      max-ttl: 3600
+    audit: none
+- path: /sui/coin/market/pro
+  method: get
+  operationId: get_suicoinmarketdata2
+  x-agentic-access:
+    action-class: connected
+    consequence: read
+    subject: optional
+    token:
+      max-ttl: 3600
+    audit: none
+- path: /sui/coin/ohlcv
+  method: get
+  operationId: get_new-endpoint
+  x-agentic-access:
+    action-class: connected
+    consequence: read
+    subject: optional
+    token:
+      max-ttl: 3600
+    audit: none
+- path: /sui/coin/price/list
+  method: get
+  operationId: get_coinpricelist
+  x-agentic-access:
+    action-class: connected
+    consequence: read
+    subject: optional
+    token:
+      max-ttl: 3600
+    audit: none
+- path: /sui/coin/trades
+  method: get
+  operationId: get_cointrades
+  x-agentic-access:
+    action-class: connected
+    consequence: read
+    subject: optional
+    token:
+      max-ttl: 3600
+    audit: none
+- path: /sui/nft/activities
+  method: get
+  operationId: sui-retrieve-nft-activity
+  x-agentic-access:
+    action-class: connected
+    consequence: read
+    subject: optional
+    token:
+      max-ttl: 3600
+    audit: none
+- path: /sui/nft/collection/holder
+  method: get
+  operationId: retrieve-collection-holders
+  x-agentic-access:
+    action-class: connected
+    consequence: read
+    subject: optional
+    token:
+      max-ttl: 3600
+    audit: none
+- path: /sui/nft/collectionDetail
+  method: get
+  operationId: retrieve-collection-details
+  x-agentic-access:
+    action-class: connected
+    consequence: read
+    subject: optional
+    token:
+      max-ttl: 3600
+    audit: none
+- path: /sui/nft/list
+  method: get
+  operationId: retrieve-collection-nft-list
+  x-agentic-access:
+    action-class: connected
+    consequence: read
+    subject: optional
+    token:
+      max-ttl: 3600
+    audit: none
