@@ -146,22 +146,38 @@ common:
   url: security/blockvision-domain-security.yml
 
 apis:
-- name: BlockVision Data API
-  description: Multi-chain indexing and on-chain data-retrieval REST API (accounts, coins/tokens, NFTs, collections, DeFi portfolios, DEX market
-    data, and smart-contract verification) for Sui and Monad, authenticated with an x-api-key header and metered in Compute Units.
+- aid: blockvision:blockvision-monad-api
+  name: BlockVision Monad API
+  description: The Monad API from BlockVision — 21 operation(s) for monad.
   humanURL: https://docs.blockvision.org/reference/welcome-to-blockvision
   baseURL: https://api.blockvision.org
+  tags:
+  - Monad
   properties:
-  - url: openapi/blockvision-v2-openapi.yml
-    type: OpenAPI
+  - type: OpenAPI
+    url: openapi/blockvision-monad-api-openapi.yml
   - type: Documentation
     url: https://docs.blockvision.org
   - type: APIReference
     url: https://docs.blockvision.org/reference
   - type: Authentication
     url: authentication/blockvision-authentication.yml
-  aid: blockvision:blockvision-data-api
-
+- aid: blockvision:blockvision-sui-api
+  name: BlockVision Sui API
+  description: The Sui API from BlockVision — 15 operation(s) for sui.
+  humanURL: https://docs.blockvision.org/reference/welcome-to-blockvision
+  baseURL: https://api.blockvision.org
+  tags:
+  - Sui
+  properties:
+  - type: OpenAPI
+    url: openapi/blockvision-sui-api-openapi.yml
+  - type: Documentation
+    url: https://docs.blockvision.org
+  - type: APIReference
+    url: https://docs.blockvision.org/reference
+  - type: Authentication
+    url: authentication/blockvision-authentication.yml
 x-enrichment:
   date: '2026-07-19'
   status: backfilled

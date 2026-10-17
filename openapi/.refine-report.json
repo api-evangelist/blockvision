@@ -1,0 +1,59 @@
+{
+  "provider": "blockvision",
+  "sources": [
+    "blockvision-v2-openapi.yml"
+  ],
+  "outputs": [
+    "blockvision-monad-api-openapi.yml",
+    "blockvision-sui-api-openapi.yml"
+  ],
+  "archived": [
+    "archived openapi/blockvision-v2-openapi.yml"
+  ],
+  "errors": [],
+  "warnings": [],
+  "notes": [
+    "sourced from openapi/_original/ (0 archived document(s)); previously refined output at the top level was skipped rather than re-split",
+    "blockvision-v2-openapi.yml: upgraded openapi 3.1.0 -> OpenAPI 3.2.0",
+    "blockvision-v2-openapi.yml: tagged paths GET /monad/account/activities -> Monad",
+    "blockvision-v2-openapi.yml: tagged paths GET /monad/account/defiPortfolio -> Monad",
+    "blockvision-v2-openapi.yml: tagged paths GET /monad/account/internal/transactions -> Monad",
+    "blockvision-v2-openapi.yml: tagged paths GET /monad/account/nfts -> Monad",
+    "blockvision-v2-openapi.yml: tagged paths GET /monad/account/tokens -> Monad",
+    "blockvision-v2-openapi.yml: tagged paths GET /monad/account/transactions -> Monad",
+    "blockvision-v2-openapi.yml: tagged paths GET /monad/collection/activities -> Monad",
+    "blockvision-v2-openapi.yml: tagged paths GET /monad/collection/holders -> Monad",
+    "blockvision-v2-openapi.yml: tagged paths GET /monad/contract/detail -> Monad",
+    "blockvision-v2-openapi.yml: tagged paths GET /monad/contract/source/code -> Monad",
+    "blockvision-v2-openapi.yml: tagged paths GET /monad/native/holders -> Monad",
+    "blockvision-v2-openapi.yml: tagged paths GET /monad/token/activities -> Monad",
+    "blockvision-v2-openapi.yml: tagged paths GET /monad/token/detail -> Monad",
+    "blockvision-v2-openapi.yml: tagged paths GET /monad/token/gating -> Monad",
+    "blockvision-v2-openapi.yml: tagged paths GET /monad/token/holders -> Monad",
+    "blockvision-v2-openapi.yml: tagged paths GET /monad/token/market/data -> Monad",
+    "blockvision-v2-openapi.yml: tagged paths GET /monad/token/ohlcv -> Monad",
+    "blockvision-v2-openapi.yml: tagged paths GET /monad/token/pools -> Monad",
+    "blockvision-v2-openapi.yml: tagged paths GET /monad/token/price/list -> Monad",
+    "blockvision-v2-openapi.yml: tagged paths GET /monad/token/trades -> Monad",
+    "blockvision-v2-openapi.yml: tagged paths GET /monad/verified/contracts -> Monad",
+    "blockvision-v2-openapi.yml: tagged paths GET /sui/account/activities -> Sui",
+    "blockvision-v2-openapi.yml: tagged paths GET /sui/account/coins -> Sui",
+    "blockvision-v2-openapi.yml: tagged paths GET /sui/account/defiPortfolio -> Sui",
+    "blockvision-v2-openapi.yml: tagged paths GET /sui/account/nfts -> Sui",
+    "blockvision-v2-openapi.yml: tagged paths GET /sui/coin/detail -> Sui",
+    "blockvision-v2-openapi.yml: tagged paths GET /sui/coin/dex/pools -> Sui",
+    "blockvision-v2-openapi.yml: tagged paths GET /sui/coin/holders -> Sui",
+    "blockvision-v2-openapi.yml: tagged paths GET /sui/coin/market/pro -> Sui",
+    "blockvision-v2-openapi.yml: tagged paths GET /sui/coin/ohlcv -> Sui",
+    "blockvision-v2-openapi.yml: tagged paths GET /sui/coin/price/list -> Sui",
+    "blockvision-v2-openapi.yml: tagged paths GET /sui/coin/trades -> Sui",
+    "blockvision-v2-openapi.yml: tagged paths GET /sui/nft/activities -> Sui",
+    "blockvision-v2-openapi.yml: tagged paths GET /sui/nft/collection/holder -> Sui",
+    "blockvision-v2-openapi.yml: tagged paths GET /sui/nft/collectionDetail -> Sui",
+    "blockvision-v2-openapi.yml: tagged paths GET /sui/nft/list -> Sui",
+    "blockvision-v2-openapi.yml: declared missing tag: Monad",
+    "blockvision-v2-openapi.yml: declared missing tag: Sui",
+    "apis.yml register: written (+2 apis, 2 total)"
+  ],
+  "skipped": []
+}
