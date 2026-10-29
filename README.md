@@ -1,4 +1,4 @@
-# blockvision
+# BlockVision
 
 <!-- API-EVANGELIST-PROVENANCE:BEGIN -->
 > ### About this repository
@@ -64,6 +64,115 @@
 > Full detail: **[Where this data comes from](https://apievangelist.com/about/where-our-data-comes-from)**
 <!-- API-EVANGELIST-PROVENANCE:END -->
 
-blockvision is a company surfaced as a portfolio company of qiming and added to the API Evangelist network as a stub for enrichment. This profile is a lead awaiting the enrichment pipeline.
+BlockVision is a Web3 data infrastructure provider offering multi-chain node, indexing, and on-chain data-retrieval APIs for developers building decentralized applications. Its stack includes an Indexing API service (real-time account, coin/token, NFT, DeFi, DEX-market and smart-contract data across Sui, Monad, Ethereum, Arbitrum, BNB Chain, Optimism and Polygon), an RPC Node service (AceNode) with geo-distributed low-latency and archive access, a gRPC endpoint for Sui, and Explorer-as-a-Service (branded block explorers such as SuiVision and BBScan). Requests to the Data API (api.blockvision.org, versioned under /v2) are authenticated with an x-api-key header and metered in Compute Units. Originally added to the API Evangelist network as a portfolio company of Qiming, this profile has been enriched from BlockVision's public developer surface.
 
-Backed by: qiming — https://blockvision.org
+**Areas:** Company · Blockchain · Web3 · Data Infrastructure · Sui · Monad · NFT · DeFi · RPC Node · Indexing · Cryptocurrency · Smart Contracts
+
+## BlockVision on APIs.io
+
+Everything profiled for BlockVision is published on APIs.io rather than in this repository. Start at the provider page — **[apis.io/providers/blockvision/](https://apis.io/providers/blockvision/)** — or go straight to one of the APIs or properties below.
+
+### APIs (2)
+
+- [BlockVision Monad API](https://apis.io/apis/blockvision/blockvision-monad-api/) — The Monad API from BlockVision — 21 operation(s) for monad.
+- [BlockVision Sui API](https://apis.io/apis/blockvision/blockvision-sui-api/) — The Sui API from BlockVision — 15 operation(s) for sui.
+
+### Published properties
+
+Each property below is a page on APIs.io carrying the machine-readable artifact and what it says.
+
+#### MCP servers (1)
+
+Model Context Protocol servers that expose the API to agents.
+
+- [blockvision](https://apis.io/servers/blockvision/blockvision/)
+
+#### Agentic access (1)
+
+Which operations an agent can call, which act, and which need a human in the loop.
+
+- [Blockvision Agentic Access](https://apis.io/agentic-access/blockvision/blockvision-agentic-access/)
+
+#### Governance rules (1)
+
+Spectral rulesets for the provider's contracts.
+
+- [BlockVision API Rules](https://apis.io/rules/blockvision/blockvision-rules/)
+
+#### Security (2)
+
+Authentication, trust centre, and vulnerability disclosure.
+
+- [Blockvision Authentication](https://apis.io/security/blockvision/blockvision-authentication/)
+- [Blockvision Domain Security](https://apis.io/security/blockvision/blockvision-domain-security/)
+
+## Where to find this API
+
+Links to the company's own pages. This repository publishes no copy of their specifications — the canonical document is theirs and lives at the URLs below.
+
+- [Website](https://blockvision.org)
+- [Documentation](https://docs.blockvision.org)
+- [Getting started](https://docs.blockvision.org/reference/welcome-to-blockvision)
+- [API reference](https://docs.blockvision.org/reference)
+- [Pricing](https://blockvision.org/pricing)
+- [Sign up](https://dashboard.blockvision.org/app)
+- [Support](https://discord.gg/J6Vm2W8JRj)
+- [Blog](https://medium.com/@BlockVision)
+- [Terms of service](https://blockvision.org/terms)
+- [Privacy policy](https://blockvision.org/privacy)
+- [GitHub](https://github.com/blockvisionhq)
+
+## API Evangelist rating
+
+**Kin Score 39.4** — developing · rubric 0.25.0 · scored 2026-10-23
+
+| Facet | Score |
+|---|---|
+| Discoverability | 73.2 |
+| Contract quality | 51.0 |
+| Contract governance | 18.2 |
+| Operational transparency | 10.5 |
+| Developer ergonomics | 40.5 |
+| Access clarity | 31.6 |
+
+**Agent readiness 30.9** — agent-ready
+
+| Agent-readiness dimension | Result |
+|---|---|
+| Spec Presence | yes |
+| Agentic Access | derived (partial credit) |
+| Reversibility Documented | na |
+| MCP Server | — |
+| Auth Clarity | bearer (partial credit) |
+| Idempotency | na |
+| Error Semantics | documented (partial credit) |
+| OpenAPI Examples | verified |
+| Rate Limit Signal | — |
+| Event Surface Described | — |
+| Agent Skills | — |
+| Well Known Catalog | — |
+| Consent Identity | — |
+| Agent Card | — |
+| Dry Run Mode | na |
+| Delegated Identity | — |
+| Protected Resource Metadata | — |
+| Dynamic Client Registration | — |
+| Agentic Commerce | — |
+| Pagination Ratio | na |
+| Operation Distinctiveness | distinct |
+
+**Regulatory alignment 24.5** — Horizontal (data, software, accessibility, platform)
+
+The rubric is published at [github.com/api-evangelist/kin-score](https://github.com/api-evangelist/kin-score). The per-check breakdown behind these numbers — which checks were earned, partial or missed — along with score history and how this provider compares to its peers, is available at [apis.io/providers/blockvision/](https://apis.io/providers/blockvision/).
+
+## How this profile is made
+
+API Evangelist profiles a company's public API surface the way a developer would find it: the website, developer portal and documentation, the specifications it publishes, its public repositories, and its pricing, status and changelog pages. From that it derives the properties above — contracts split per API, workflows, schemas, collections, governance rules, plans and rate limits — and scores them against the published [Kin Score rubric](https://github.com/api-evangelist/kin-score).
+
+The artifacts are published on [APIs.io](https://apis.io), not in this repository. This repository is the public record for BlockVision: the place to say something is wrong, missing or out of date, and to ask for a re-score or a removal.
+
+## Open an issue
+
+- **Something about this listing** — a wrong description, a missing API, a stale artifact or a question about the rating: [open an issue on this repository](https://github.com/api-evangelist/blockvision/issues/new).
+- **A new API, or one that is not in the catalog yet** — [submit it on APIs.io](https://apis.io/add/).
+- **Anything else** — [the APIs.io inbox](https://github.com/api-search/inbox/issues/new) or [info@apievangelist.com](mailto:info@apievangelist.com).
